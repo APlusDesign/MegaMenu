@@ -312,6 +312,7 @@ nav {
   margin: 3px 0 0 10px;
 }
 .level-2.list-based a {
+  height: auto;
   padding: 10px 5px 10px 0;
 }
 .level-2.list-based strong {
