@@ -1,0 +1,373 @@
+/*************/
+/*  Reset   */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: top;
+  background: transparent;
+  vertical-align: baseline;
+}
+body {
+  line-height: 1;
+}
+td {
+  vertical-align: top;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+:focus {
+  outline: 0;
+}
+ins {
+  text-decoration: none;
+}
+del {
+  text-decoration: line-through;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+a {
+  text-decoration: none;
+}
+button::-moz-focus-inner {
+  border: 0;
+}
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  color: #333;
+  font: 100%/1.4 Arial, Helvetica, sans-serif;
+  text-align: center;
+  overflow-x: hidden;
+}
+header,
+footer,
+nav,
+section,
+aside,
+article {
+  display: block;
+}
+input,
+select,
+option,
+textarea,
+a,
+a:active {
+  outline: none;
+}
+/**********************************************************/
+/* Prevent multiple requests for image sprite            */
+/* Declare all elements that use your image sprite once 
+.xxxxxxxx {
+	background: url("../../_images/default/sprite.png") no-repeat;
+}
+*/
+/*************/
+/* Globals  */
+a {
+  color: #007ed6;
+  text-decoration: none;
+}
+/*************/
+/* Template */
+/* Header */
+/* Wrapper  */
+.wrapper {
+  margin: 0 auto;
+  width: 980px;
+  text-align: left;
+}
+nav {
+  text-align: center;
+  background: #333;
+  height: 50px;
+}
+/* Footer */
+/*************/
+/* Megamenu */
+.megamenu {
+  display: inline-block;
+  margin: 0 auto;
+}
+.megamenu > li {
+  float: left;
+  padding: 7px 0;
+}
+.megamenu > li.is-active > a,
+.megamenu > li[data-hover="mega"]:hover > a {
+  background: rgba(0, 0, 0, 0.3);
+}
+.megamenu > li.is-active > a:after,
+.megamenu > li[data-hover="mega"]:hover > a:after {
+  opacity: 1;
+}
+.megamenu > li > a {
+  transition: all 0.25s linear;
+  -webkit-transition: all 0.25s linear;
+  -moz-transition: all 0.25s linear;
+  -ms-transition: all 0.25s linear;
+  -o-transition: all 0.25s linear;
+  text-shadow: 0 1px 1px #000;
+  font-weight: bold;
+  text-transform: capitalize;
+  border-radius: 10px;
+  color: #fff;
+  height: 36px;
+  line-height: 2.5em;
+  margin: 0 4px 0 0;
+  padding: 0 16px;
+  display: inline-block;
+  position: relative;
+}
+.megamenu > li > a:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+.megamenu > li > a:after {
+  transition: none;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -ms-transition: none;
+  -o-transition: none;
+  z-index: 9999;
+  top: 43px;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(255, 255, 255, 0);
+  border-top-color: #333333;
+  border-width: 6px;
+  left: 50%;
+  margin-left: -6px;
+  opacity: 0;
+}
+/* Actual hover mega menues */
+.mega {
+  display: none;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  position: absolute;
+  margin: 7px 0 0 0;
+  width: 650px;
+  z-index: 9998;
+  text-align: left;
+}
+.mega .inner {
+  height: 100%;
+  padding: 15px 15px 0;
+}
+/* Mixins */
+.sprite-ui {
+  background: transparent url('../images/sprite-ui.png') 0 0 no-repeat;
+}
+.transition-all {
+  transition: all 0.25s linear;
+  -webkit-transition: all 0.25s linear;
+  -moz-transition: all 0.25s linear;
+  -ms-transition: all 0.25s linear;
+  -o-transition: all 0.25s linear;
+}
+.transition-none {
+  transition: none;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -ms-transition: none;
+  -o-transition: none;
+}
+/* Sub menu inside a mega menu */
+.level-2 {
+  margin: 0 0 10px;
+  overflow: hidden;
+}
+.level-2 li {
+  float: left;
+  display: block;
+}
+.level-2 a {
+  overflow: hidden;
+  display: block;
+  border-radius: 5px;
+  height: 55px;
+  padding: 10px 5px 5px 0;
+  margin: 0 5px 0 0;
+}
+.level-2 a:hover,
+.level-2 a.is-active {
+  background: rgba(75, 75, 75, 0.7);
+}
+.level-2 strong {
+  font-size: 12px;
+  word-wrap: break-word;
+  display: block;
+}
+.level-2 p {
+  font-size: 11px;
+  color: #fff;
+  word-wrap: break-word;
+}
+.level-2.picture-based span {
+  background: transparent url('../images/sprite-ui.png') 0 0 no-repeat;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  float: left;
+}
+.level-2.picture-based strong {
+  margin: 0 0 0 60px;
+}
+.level-2.picture-based p {
+  margin: 3px 0 0 60px;
+}
+.level-2.link-based a {
+  padding: 10px 5px 10px 0;
+}
+.level-2.link-based strong {
+  margin: 0 0 0 10px;
+}
+.level-2.link-based p {
+  margin: 3px 0 0 10px;
+}
+.level-2.list-based a {
+  padding: 10px 5px 10px 0;
+}
+.level-2.list-based strong {
+  margin: 0 0 0 10px;
+}
+.level-2.list-based p {
+  margin: 3px 0 0 10px;
+}
+.level-2.two-columns li {
+  width: 50%;
+}
+.level-2.three-columns li {
+  width: 33%;
+}
+.level-2.four-columns li {
+  width: 25%;
+}
+.mm-icon-1 {
+  background-position: -950px -4px !important;
+}
+.mm-icon-2 {
+  background-position: -900px -4px !important;
+}
+.mm-icon-3 {
+  background-position: -850px -4px !important;
+}
+.mm-icon-4 {
+  background-position: -800px -4px !important;
+}
+.mm-icon-5 {
+  background-position: -750px -4px !important;
+}
+.mm-icon-6 {
+  background-position: -700px -4px !important;
+}
+.mm-icon-7 {
+  background-position: -650px -4px !important;
+}
+.mm-icon-8 {
+  background-position: -600px -4px !important;
+}
+.mm-icon-9 {
+  background-position: -950px -54px !important;
+}
+.mm-icon-10 {
+  background-position: -900px -54px !important;
+}
+.mm-icon-11 {
+  background-position: -850px -54px !important;
+}
+.mm-icon-12 {
+  background-position: -800px -54px !important;
+}
+.mm-icon-13 {
+  background-position: -750px -54px !important;
+}
+.mm-icon-14 {
+  background-position: -700px -54px !important;
+}
